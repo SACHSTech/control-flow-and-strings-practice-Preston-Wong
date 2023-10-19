@@ -1,7 +1,7 @@
 class A1FreezingHot extends ConsoleProgram {
 
   /**
-  * Description
+  * Description Sees if the water is either boiling, frozen, or warm in temperature 
   * @author: Preston Wong
   */
   
