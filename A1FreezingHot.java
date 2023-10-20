@@ -7,21 +7,20 @@ class A1FreezingHot extends ConsoleProgram {
   
   public void run() {
     
-    Integer intTemp;
-    
-    // Getting user input for the temperature for their water 
-    intTemp = readInt("What is your water temperature? ");
+    Integer intTemp1;
+    Integer intTemp2;
 
-    // Sees is the water is forzen, warm, or boiling 
-    if (intTemp < 0) {
-        System.out.println("Your water is frozen and is now ice");
+    // Getting user input for the temperature for their water 
+    intTemp1 = readInt("What is the first temperature? ");
+    intTemp2 = readInt("What is the first temperature? ");
+
+    // Sees is the water is forzen or boiling 
+    if ((intTemp1 < 0 || intTemp1 >= 100) && (intTemp2 < 0 || intTemp2 >= 100)) {
+      System.out.println("True");
+    } else {
+      System.out.println("False");
     }
-    else if (intTemp > 0 && intTemp < 100) {
-        System.out.println("Your water is warm but not hot");
-    }
-    else {
-        System.out.println("Your water is boiling hot");
-    }
+    
     
   }
 }
