@@ -18,11 +18,11 @@ class A3Within10 extends ConsoleProgram {
 
     // proccesse the 2 numbers and sees which one is closer to 10 then the other, or if they are the same disatnce away 
     if (Math.abs(10 - intNum1) > Math.abs(10-intNum2)) {
-        System.out.println("The second number is closer to 10");
+        System.out.println(intNum2);
     } else if (Math.abs(10-intNum1) < Math.abs(10-intNum2)) {
-        System.out.println("The frist number is closer to 10");
+        System.out.println(intNum1);
     } else {
-        System.out.println("They are equal distance from 10");
+        System.out.println("0");
     }
 
     
