@@ -12,25 +12,23 @@ class B1DiceGame extends ConsoleProgram {
     // randomizer 
     Random myRandom = new Random();
     
-    // variables 
-    int intRandom = myRandom.nextInt((6-1)+1)+1;
-    int intGuess;
+    // rolls the number 100 times 
+    for (int i = 0; i <= 100; i++){
 
-    // gets the user's first guess 
-    intGuess = readInt("Guess which side the dice landed on (1-6): ");
+      // variables for the randomizer 
+      int intDice1 = myRandom.nextInt((6-1)+1)+1;
+      int intDice2 = myRandom.nextInt((6-1)+1)+1;
 
-    // determines if the number inputted is too high, low, or is correct 
-    while (intGuess > intRandom) {
-        // give the user a hint that their number is too high 
-        System.out.println("That is too high, guess lower");
-        intGuess = readInt("Guess which side the dice landed on (1-6): ");
+      // sees if the sum of the 2 random numbers are equal to 7 or 2
+      if ((intDice1 + intDice2) == 7) {
+        System.out.println("lucky seven");
+      }
+      else if ((intDice1 + intDice2) == 2) {
+        System.out.println("snaeks eyes!");
+      }
     }
-    
-    while (intGuess < intRandom) {
-        // gives the user a hint taht their number is too low 
-        System.out.println("That is too low, guess higher ");
-        intGuess = readInt("Guess which side the dice landed on (1-6): ");
-    }
-    System.out.println("Correct, that is the number!");
+
+
+   
   }
 }
