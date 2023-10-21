@@ -9,18 +9,17 @@ class A1FreezingHot extends ConsoleProgram {
     
     Integer intTemp1;
     Integer intTemp2;
+    Boolean blnFrozenHot;
 
     // Getting user input for the temperature for their water 
     intTemp1 = readInt("What is the first temperature? ");
     intTemp2 = readInt("What is the second temperature? ");
 
-    // Sees is the water is forzen or boiling 
-    if ((intTemp1 < 0 || intTemp2 < 0 ) && (intTemp1 >= 100|| intTemp2 >= 100)) {
-      System.out.println("True");
-    } else {
-      System.out.println("False");
-    }
-    
+    // sees if the temperature is frozen and hot 
+    blnFrozenHot = ((intTemp1 < 0 || intTemp2 < 0 ) && (intTemp1 >= 100|| intTemp2 >= 100));
+
+    // displays the final result 
+    System.out.println(blnFrozenHot);
     
   }
 }
