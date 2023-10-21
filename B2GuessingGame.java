@@ -13,23 +13,32 @@ class B2GuessingGame extends ConsoleProgram {
     Random myRandom = new Random();
 
     // variables 
-    Integer intRandom = myRandom.nextInt((100-0)+1);
+    Integer intRandom = myRandom.nextInt((5-0)+1);
     Integer intGuess;
+    //Integer Counter = 0;
 
     // get the user's first input 
     intGuess = readInt("Guess a number between 0 - 100: ");
 
     // checks to see if the user's guess is too high, too low, or on point
-    while (intGuess > intRandom) {
-        System.out.println("That is too high, try again");
-        intGuess = readInt("Guess a number between 0 - 100: ");
-    }
-    while (intGuess < intRandom) {
+    for (int Counter = 1; Counter <= 5; Counter++){
+      if (Counter == 5) {
+        System.out.println("Nice Try ");
+        
+      } else if (intGuess < intRandom) {
         System.out.println("That is too low, try again");
         intGuess = readInt("Guess a number between 0 - 100: ");
-    }
-    System.out.println("Congrates, you guessed the right number");
 
+      } else if (intGuess > intRandom) {
+        System.out.println("That is too high, try again");
+        intGuess = readInt("Guess a number between 0 - 100: ");
+
+      } else if (intGuess == intRandom){
+        System.out.println("That is correct!");
+        break;
+      }
+    }
   }
 }
+
 
