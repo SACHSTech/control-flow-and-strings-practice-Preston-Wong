@@ -2,7 +2,7 @@
 class C4IsSandwich extends ConsoleProgram {
 
   /**
-  * Description
+  * Description: sees if the word inputted is a sandwich or is not a sandwich 
   * @author: Preston Wong
   */
   
@@ -13,7 +13,7 @@ class C4IsSandwich extends ConsoleProgram {
     Integer intBread2;
     
     // gets user input about their sandwich
-    strSandwich = readLine("please input that your sandwich has in it (no spaces): ");
+    strSandwich = readLine("please input what your sandwich has in it: ");
 
     // locates the starting position of the first and second instance of the word bread 
     intBread1 = strSandwich.indexOf("bread");
@@ -24,10 +24,7 @@ class C4IsSandwich extends ConsoleProgram {
     // sees if there are 2 peices of bread present from the user input and displays the filling inside it if it is a sandwich
     if (intBread1 < intBread2){
         System.out.println(strSandwich.substring(intBread1 + 5, intBread2));
-    } else {
-        System.out.println("That not a sandwich, there's only one peice of bread.");
-    }
-    
+    } 
     
   }
 }

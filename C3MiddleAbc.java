@@ -10,6 +10,7 @@ class C3MiddleAbc extends ConsoleProgram {
     
     // variable 
     String strWord;
+    Boolean blnMiddle = true;
     
     // getting the user input for this sequence of letters 
     strWord = readLine("What is your sequence of letters? ");
@@ -19,13 +20,8 @@ class C3MiddleAbc extends ConsoleProgram {
     int intABC = strWord.indexOf("abc");
 
     // processes to see if the term abc is in the middle of the sequcne of letters or not 
-    if (intABC > (intLength - (intABC + 2)) || intABC < (intLength - (intABC + 4))) {
-        System.out.println("ABC is not in the middle of the word ");
-    } else {
-        System.out.println("ABC is in the middle of the word");
-    }
-
-
+    blnMiddle =! (intABC > (intLength - (intABC + 2)) || intABC < (intLength - (intABC + 4)));
+    System.out.println(blnMiddle);
 
   }
 }

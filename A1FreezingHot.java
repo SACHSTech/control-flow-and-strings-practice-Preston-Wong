@@ -7,6 +7,7 @@ class A1FreezingHot extends ConsoleProgram {
   
   public void run() {
     
+    // variables 
     Integer intTemp1;
     Integer intTemp2;
     Boolean blnFrozenHot;

@@ -13,7 +13,6 @@ class B3DivisorCount extends ConsoleProgram {
 
     // getting the user's number that they want to know the possible divisors of 
     intNumber = readInt("What is your number? ");
-
     
     System.out.println("The divisors of " + intNumber + " are: ");
 

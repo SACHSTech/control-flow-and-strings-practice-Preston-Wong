@@ -15,7 +15,6 @@ class B2GuessingGame extends ConsoleProgram {
     // variables 
     Integer intRandom = myRandom.nextInt((5-0)+1);
     Integer intGuess;
-    //Integer Counter = 0;
 
     // get the user's first input 
     intGuess = readInt("Guess a number between 0 - 100: ");
