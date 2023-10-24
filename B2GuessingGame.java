@@ -13,7 +13,7 @@ class B2GuessingGame extends ConsoleProgram {
     Random myRandom = new Random();
 
     // variables 
-    Integer intRandom = myRandom.nextInt((5-0)+1);
+    Integer intRandom = myRandom.nextInt((100-0)+1);
     Integer intGuess;
 
     // get the user's first input 
